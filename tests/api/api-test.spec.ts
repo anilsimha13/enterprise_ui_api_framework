@@ -41,7 +41,7 @@ test("Should Login user into the application", async ({ request }) => {
   );
   const response_json = await response.json();
   const access_token = response_json.access_token;
-  const tokenValue = { "auth-token": `${access_token}` };
+  const tokenValue = { token: `${access_token}` };
   const writtenValue = fs.writeFileSync(
     "./credentials/auth-token.json",
     JSON.stringify(tokenValue, null, 4),
