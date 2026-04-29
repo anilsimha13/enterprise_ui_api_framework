@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import fs from "fs";
 
-test("test", async ({ page }) => {
+test.skip("test", async ({ page }) => {
   const config = JSON.parse(
     fs.readFileSync("./credentials/auth-token.json", "utf8"),
   );

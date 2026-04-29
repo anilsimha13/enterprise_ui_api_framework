@@ -60,6 +60,8 @@ test("test", async ({ page }) => {
   await page.locator("#card_holder_name").fill(faker.person.fullName());
 
   await page.locator('[data-test="finish"]').click();
+
+  await page.close();
 });
 
 test.skip("completing payment for items in cart", async ({ page }) => {
